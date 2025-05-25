@@ -1,0 +1,29 @@
+
+
+.blogs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aquamarine;
+    /* gap: 7vh; */
+    height: 50vh;
+}
+
+.blogs-cards{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.blogs-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+}

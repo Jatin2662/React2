@@ -1,0 +1,84 @@
+.navbar {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.navbar span {
+    font-size: 30px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 40%;
+    font-size: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--navbar-text);
+}
+
+.navbar ul li a:hover {
+    color: var(--nav-hover-color);
+}
+
+.navbar ul li button {
+    background: none;
+    border: 1px solid var(--navbar-text);
+    padding: 6px 12px;
+    color: var(--navbar-text);
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.navigate-b-n {
+    cursor: pointer;
+    position: relative;
+}
+
+.box-navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+    width: max-content;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.box-navbar ul {
+    flex-direction: column;
+    gap: 7px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+.box-navbar ul li a {
+    text-decoration: none;
+    /* color: var(--navbar-text); */
+    /* background-color: aqua; */
+}
+
+.box-navbar ul li a:hover {
+    color: var(--nav-hover-color);
+}

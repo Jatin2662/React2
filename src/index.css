@@ -1,0 +1,23 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --navbar-bg: #007ffe;
+  --navbar-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --navbar-bg: #1e293b;
+  --navbar-text: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
