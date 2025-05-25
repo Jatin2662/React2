@@ -6,59 +6,81 @@ import '../styles/Home.css';
 
 
 function Home() {
+
+    const topics = [
+        {
+            title: "React Router (Routing in Single Page Applications)",
+            whatToLearn: [
+                "Setting up routes using react-router-dom.",
+                "Navigating between pages/components.",
+                "Dynamic routes and useParams.",
+                "useNavigate and programmatic navigation."
+            ],
+            exampleTasks: [
+                "Creating a mini blog app with Home, About, Blog, and a dynamic Post/:id page."
+            ]
+        },
+        {
+            title: "React Context API (Basic Global State Management)",
+            whatToLearn: [
+                "Creating a Context.",
+                "Providing and consuming global values.",
+                "Replacing prop-drilling in medium apps."
+            ],
+            exampleTasks: [
+                "Theme toggler across app (light/dark).",
+                "User login status shared across multiple components."
+            ]
+        },
+        {
+            title: "Form Handling (Advanced Forms)",
+            whatToLearn: [
+                "Step form, filling step by step."
+            ],
+            exampleTasks: [
+                "Creating a multi-step signup form with validation (name, email, password, etc.)."
+            ]
+        },
+        {
+            title: "Lifting State Up & Component Communication",
+            whatToLearn: [
+                "Sharing data between sibling components.",
+                "Lifting state up to common parent.",
+            ],
+            exampleTasks: [
+                "Building a Todo App:",
+                "Add and delete tasks.",
+                "Mark complete.",
+                "Filter (All, Active, Completed)."
+            ]
+        }
+    ];
+
+
+
     return (
         <section className="home">
             <h1>Practice</h1>
-            <ul>
-                <li>
-                    1️⃣ React Router (Routing in Single Page Applications)
-                    What to Learn:
-                    •	Setting up routes using react-router-dom.
-                    •	Navigating between pages/components.
-                    •	Dynamic routes and useParams.
-                    •	useNavigate and programmatic navigation.
-                    Example Task:
-                    •	Create a mini blog app with Home, About, Blog, and a dynamic Post/:id page.
-                </li>
-
-                <li>
-                    2️⃣ React Context API (Basic Global State Management)
-                    What to Learn:
-                    •	Creating a Context.
-                    •	Providing and consuming global values.
-                    •	Replacing prop-drilling in medium apps.
-                    Example Task:
-                    •	Theme toggler across app (light/dark).
-                    •	User login status shared across multiple components.
-
-                </li>
-
-                <li>
-                    3️⃣ Form Handling & Validation (Advanced Forms)
-                    What to Learn:
-                    •	Controlled vs Uncontrolled components.
-                    •	Handling large forms (with multiple fields).
-                    •	Validating fields.
-                    •	Optional: use libraries like formik, react-hook-form.
-                    Example Task:
-                    •	Create a multi-step signup form with validation (name, email, password, etc.).
-
-                </li>
-
-                <li>
-                    4️⃣ Lifting State Up & Component Communication
-                    What to Learn:
-                    •	Sharing data between sibling components.
-                    •	Lifting state up to common parent.
-                    •	More practice with functions as props.
-                    Example Task:
-                    •	Build a Todo App:
-                    o	Add and delete tasks.
-                    o	Mark complete.
-                    o	Filter (All, Active, Completed).
-
-                </li>
-            </ul>
+            <div>
+                {topics.map((t, index) => (
+                    <div key={index}>
+                        <h1>{t.title}</h1>
+                        <h4>What to Learn:</h4>
+                        <ul>
+                            {t.whatToLearn.map((tw, i) => (
+                                <li key={i}>{tw}</li>
+                            ))}
+                        </ul>
+                        <h4>Example Tasks:</h4>
+                        <ul>
+                            {t.exampleTasks.map((te, i) => (
+                                <li key={i}>{te}</li>
+                            ))}
+                        </ul>
+                        <hr />
+                    </div>
+                ))}
+            </div>
         </section>
     )
 }
